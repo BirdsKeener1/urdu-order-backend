@@ -1,0 +1,57 @@
+{
+  "name": "Shopify Voice Call System",
+  "description": "Automated voice calls for Shopify orders",
+  "repository": "https://github.com/yourusername/shopify-voice-call",
+  "keywords": ["python", "fastapi", "shopify", "twilio"],
+  "env": {
+    "MONGODB_URL": {
+      "description": "MongoDB connection URL",
+      "required": true
+    },
+    "MONGODB_DB": {
+      "description": "MongoDB database name",
+      "value": "shopify_voice"
+    },
+    "SECRET_KEY": {
+      "description": "JWT secret key",
+      "generator": "secret"
+    },
+    "ALGORITHM": {
+      "description": "JWT algorithm",
+      "value": "HS256"
+    },
+    "ACCESS_TOKEN_EXPIRE_MINUTES": {
+      "description": "JWT token expiration time",
+      "value": "30"
+    },
+    "TWILIO_ACCOUNT_SID": {
+      "description": "Twilio Account SID",
+      "required": true
+    },
+    "TWILIO_AUTH_TOKEN": {
+      "description": "Twilio Auth Token",
+      "required": true
+    },
+    "TWILIO_PHONE_NUMBER": {
+      "description": "Twilio Phone Number",
+      "required": true
+    },
+    "SUPPORT_PHONE_NUMBER": {
+      "description": "Support Phone Number",
+      "required": true
+    },
+    "SHOPIFY_API_KEY": {
+      "description": "Shopify API Key",
+      "required": true
+    },
+    "SHOPIFY_API_SECRET": {
+      "description": "Shopify API Secret",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+} 
